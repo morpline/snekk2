@@ -19,9 +19,9 @@ def getPixel (x,y,mode):
     screenw = screen.get_width()
     screenh = screen.get_height()
     if(mode=="grid"):
-        return (screenw/gamewidth*x,screenh/gameheight*y,screenw/gamewidth,screenh/gameheight)
+        return ((screenw/gamewidth*x)-1,(screenh/gameheight*y)-1,(screenw/gamewidth)+1,(screenh/gameheight)+1)
     if(mode=="ui"):
-        return (screenw/gamewidth*x/3,screenh/gameheight*y/3,screenw/gamewidth/3,screenh/gameheight/3)
+        return ((screenw/gamewidth*x/3)-1,(screenh/gameheight*y/3)-1,(screenw/gamewidth/3)+1,(screenh/gameheight/3)+1)
 def metapixel(grid,x,y):
     global screen
     i=0
